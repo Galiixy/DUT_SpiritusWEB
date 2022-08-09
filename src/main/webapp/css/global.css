@@ -1,0 +1,54 @@
+.custom-container>div:first-child {
+    flex: 0 1 100%;
+}
+#prediction-help p, #prediction-help div {
+    padding : 10px;
+}
+.btn-margin-left {
+    margin-left: 2px;
+}
+.btn-margin-right {
+    margin-right: 2px;
+}
+.my-tab-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+
+
+.move-area{/*normally use body*/
+    width: 100vw;
+    height: 100vh;
+    padding: 10% 45%;
+}
+.container {
+    width: 100%;
+}
+.eye {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background: #CCC;
+}
+.eye:after { /*pupil*/
+    position: absolute;
+    bottom: 17px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    content: " ";
+}
+
+
+/* wave animation */
+canvas{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+}

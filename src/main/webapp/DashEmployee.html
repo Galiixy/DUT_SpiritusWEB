@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Accueil</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="js/employee_dashboard.js"></script> 
+        <script src="accountManagement.js"></script>
+        <script src="startConsultation.js"></script>
+        <script>
+        $(function(){
+            $("#navbar-custom").load("navbar.html");
+        });
+    </script>
+    </head>
+    <body>
+        <div id="navbar-custom"></div>
+        
+        </br>
+                </br>
+        <div class="container text-center">
+            <h2>Ma situation</h2>
+        </div>
+        <br>
+        <div class="text-center">
+            <center>
+            <div class="text-center">
+                <img id="available" width="50" height="50" src="" alt="img_available">
+            </div>
+            <div class="text-center">
+                <h6 class="available"></h6>
+            </div></center>
+
+        </div>
+        </br>
+        </br>   
+
+        <h5 id="consultationStatus">Consultation en attente / en cours</h5>
+        <table id="pendingInProgressConsult" class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Medium</th>
+                    <th scope="col">Client</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="container text-center">
+            <button id="startConsultationButton"
+                    type="button"
+                    class="btn btn-primary"
+                    disabled
+                    onclick="SpiritiusConsultation.startConsultation()">
+                Lancer la consultation
+            </button>
+        </div>
+        </br>
+        </br>
+        
+        <h5>Historique de consultation</h5>
+        <table id="historiqueConsult" class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Medium</th>
+                    <th scope="col">Client</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Commentaire</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </body>
+</html>

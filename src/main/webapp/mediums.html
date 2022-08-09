@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mediums</title>
+        <link rel="stylesheet" href="./css/mdb.dark.min.css">
+        <link rel="stylesheet" href="./css/carousel.css">
+        <link rel="stylesheet" href="./css/scroll.css">
+        <link
+                rel="stylesheet"
+                href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="js/mdb.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="accountManagement.js"></script>
+        <script src="slidesFetch.js"></script>
+        <script>
+            $(function(){
+                $("#navbar-custom").load("navbar.html");
+            });
+        </script>
+
+    </head>
+    <body class="bg-dark">
+        <div id="navbar-custom"></div>
+        <!-- Swiper -->
+        <div class="text-center">
+            <h1 class="text-center text-white">Nos mediums</h1>
+        </div>
+
+        <section class="swiper-container loading bg-dark">
+            <div id="dyn-swiper" class="swiper-wrapper">
+
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-white"></div>
+        </section>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+
+            SpiritusSlides.fetchMediums("#dyn-swiper", -1);
+
+        </script>
+    </body>
+</html>
